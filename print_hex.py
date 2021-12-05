@@ -32,6 +32,6 @@ def print_hex(bytes):
     
 
 
-ta="1234567890abcdefghijklmn"
+ta="1234567890abcdefghijklmn1234567890abcdefghijklmn1234567890abcdefghijklmn"
 ta+="中国"
 print_hex(ta.encode())

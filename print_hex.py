@@ -5,7 +5,7 @@ def print_hex(bytes):
         lhex=""
         lascii=""
         for y in range(16):
-            lhex += '{:x}'.format(int(bytes[i*16+y])) 
+            lhex += '{:0>2x}'.format(int(bytes[i*16+y])) 
             lhex+=" "
             if chr(bytes[i*16+y]).isascii():
                 lascii += chr(bytes[i*16+y])
@@ -20,7 +20,7 @@ def print_hex(bytes):
     lhex=""
     lascii=""
     for i in range(n):
-        lhex += '{:x}'.format(int(bytes[cycle*16+i])) 
+        lhex += '{:0>2x}'.format(int(bytes[cycle*16+i])) 
         lhex+=" "
         if chr(bytes[cycle*16+i]).isascii():
                 lascii += chr(bytes[cycle*16+i])
@@ -34,4 +34,6 @@ def print_hex(bytes):
 
 ta="1234567890abcdefghijklmn1234567890abcdefghijklmn1234567890abcdefghijklmn"
 ta+="中国"
+test = b"\xab\xcd\xef\x11\x001111111111111111111111111111111111111111111111111111111"
+print_hex(test)
 print_hex(ta.encode())
